@@ -42,4 +42,17 @@ public class Factorial {
         }
         return x * recursiveFactorial(x-1);
     }
+
+    protected long unFactorial(long x){
+        int i = 1;
+        long temp = x;
+        while(x > 1 && i < temp){
+            x = x / i;
+            i++;
+        }
+        if(x == 1){
+            return i-1;
+        }
+        return 0;
+    }
 }
