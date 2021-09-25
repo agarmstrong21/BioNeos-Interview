@@ -41,12 +41,12 @@ fs.readFile(filePath, 'utf8', (err, data) => {
   console.log(`Second array: ${arrayToString(list2)}`);
 
   // ADD: Cast the lists to sets to delete duplicates across the same array 
-  let unique = [...new Set(list1)];
-  let unique2 = [...new Set(list2)];
+  let set1 = [...new Set(list1)];
+  let set2 = [...new Set(list2)];
   
   // EDIT: Combined the two sets together
   // Combined the two lists together and iterate through each word and count all instances
-  const combinedList = unique.concat(unique2);
+  const combinedList = set1.concat(set2);
   let wordInstances = {};
   combinedList.forEach(word => {
     // ADD: Set all the words to lowercase and replace all newline characters with spaces
