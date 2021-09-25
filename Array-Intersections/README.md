@@ -4,3 +4,6 @@ Once fixed, `arrayIntersection.js` should read the first two lines from a plain 
 ### Running
 Use the following command to run `<TEST_NAME>.txt`:\
 `node arrayIntersection.js <TEST_NAME>.txt`
+
+### Solution
+Check out the solution within `arrayIntersectionSoln.js`
