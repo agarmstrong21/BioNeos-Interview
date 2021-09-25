@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <script type="text/javascript" src="script.js" defer></script>
-        <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/three.js"></script>
+        <script type="text/javascript" src="js/background.js"></script>
+        <link rel="stylesheet" href="style.css"/>
     </header>
     <body>
-        <h1>Factorial Calculator enter # below</h1>
-        <div>
-            <form> Factor me : <input type="text" id="FactorMe" > </form>
-            <button onmousedown="submitButton()">Submit!</button>
+        <div class="center" id="rcorners">
+            <h1>Factorial Calculator enter # below</h1>
+            <form onsubmit="return false"> To be Factorialed : <input type="text" id="FactorMe" onkeyup="toFactorial()" onsubmit="return false"> </form>
+            <form onsubmit="return false"> To be Reverse Factorialed : <input type="text" id="UnfactorMe" onkeyup="toUnfactorial()" onsubmit="return false"> </form>
         </div>
+        <script src ="js/three.js"></script>
+        <script>
+            const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+        </script>
     </body>
     <footer>
     </footer>
