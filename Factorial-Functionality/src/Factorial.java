@@ -43,6 +43,11 @@ public class Factorial {
         return x * recursiveFactorial(x-1);
     }
 
+    /**
+     * This is an additional function that was added after the research period. This was to test the theory of finding the 
+     *  factorial root. This only shows in the UserDriver.
+     */
+
     protected long unFactorial(long x){
         int i = 1;
         long temp = x;

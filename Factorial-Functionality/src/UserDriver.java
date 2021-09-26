@@ -33,7 +33,7 @@ public class UserDriver extends Factorial{
             input = readIn.nextInt();
             System.out.println("Output with Recursion: " + new Factorial().recursiveFactorial(input));
             System.out.println("Output in Linear: " + new Factorial().linearFactorial(input));
-            System.out.println("output in unfactorial: " + new Factorial().unFactorial(input));
+            //System.out.println("output in unfactorial: " + new Factorial().unFactorial(input));
         }
     }
 }
