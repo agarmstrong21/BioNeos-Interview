@@ -1,16 +1,26 @@
+/**************************************
+ * 
+ * File Name: script.js
+ * Date: 9/25/2021
+ * Description: This is the javascript backend for index.html. This file dynamically changes the page when user inputs anything within the form.   
+ * 
+ **************************************/
+
+/**
+ * Function that is called once the FactorMe form keyup event happens. This grabs the data from the form and calls factorialOf
+ */
 function toFactorial(){
     var nameValue = document.getElementById("FactorMe").value;
     var factorial = factorialOf(nameValue)
     document.getElementById('UnfactorMe').value=factorial
 }
 
-
 /**
- * 
+ * Function that is called when the UnfactorMe form keyup event happens. This grabs the data from the form and calls factorialRootOf
  */
-function toUnfactorial(){
+function toFactorialRoot(){
     var nameValue = document.getElementById("UnfactorMe").value;
-    var unfactorial = unfactorialOf(nameValue)
+    var unfactorial = factorialRootOf(nameValue)
     document.getElementById('FactorMe').value=unfactorial
 }
 /**
@@ -31,7 +41,7 @@ function factorialOf(x){
  * @param {*} x 
  * @returns 
  */
-function unfactorialOf(x){
+function factorialRootOf(x){
     var i = 1;
     var temp = x;
     while(x > 1 && i < temp){

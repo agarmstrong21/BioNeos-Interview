@@ -1,44 +1,24 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/three.js"></script>
-        <script type="text/javascript" src="js/background.js"></script>
-        <link rel="stylesheet" href="style.css"/>
+        <!-- Javascript files -->
+        <script src="js/script.js"></script>
+        <script src="js/three.js"></script>
+        <script src="js/obj.js"></script>
+        <script src="js/mtl.js"></script>
+        <script src="js/background.js"></script>
+        
+        <!-- CSS Stylesheet file -->
+        <link rel="stylesheet" href="css/style.css"/>
     </header>
     <body>
+        <!-- Div that is centered, colored, and rounded containing...-->
         <div class="center" id="rcorners">
-            <h1>Factorial Calculator enter # below</h1>
-            <form onsubmit="return false"> To be Factorialed : <input type="text" id="FactorMe" onkeyup="toFactorial()" onsubmit="return false"> </form>
-            <form onsubmit="return false"> To be Reverse Factorialed : <input type="text" id="UnfactorMe" onkeyup="toUnfactorial()" onsubmit="return false"> </form>
+            <!-- 2 Forms that take user input for a number to be factorialed or find the factorial root -->
+            <h1>Factorial Calculator </h1>
+            <form onsubmit="return false"> To be Factorial : <input type="text" id="FactorMe" onkeyup="toFactorial()" > </form>
+            <form onsubmit="return false"> To be Factorial Root: <input type="text" id="UnfactorMe" onkeyup="toFactorialRoot()" > </form>
         </div>
-        <script src ="js/three.js"></script>
-        <script>
-            const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
-
-			const geometry = new THREE.BoxGeometry();
-			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
-
-			camera.position.z = 5;
-
-			const animate = function () {
-				requestAnimationFrame( animate );
-
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-        </script>
     </body>
     <footer>
     </footer>

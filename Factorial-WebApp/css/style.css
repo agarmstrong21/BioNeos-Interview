@@ -1,3 +1,4 @@
+/* Help center the div */
 .center{
     margin: auto;
     width: 10%;
@@ -6,10 +7,12 @@
     background-color: goldenrod;
 }
 
+/* Helps round the corners of the div */
 #rcorners{
     border-radius: 25px
 }
 
+/* Three.js canvas css edits to help it fill the screen and be behind everything */
 canvas {
     width: 100vw;
     height: 100vh;
